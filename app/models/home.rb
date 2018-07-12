@@ -5,6 +5,8 @@ class Home < MailForm::Base
   attribute :message
 
   # Declare the e-mail headers. It accepts anything the mail method
+  append :remote_ip, :user_agent, :session
+
   # in ActionMailer accepts.
   def headers
     {
