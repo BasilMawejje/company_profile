@@ -48,6 +48,9 @@ GEM
       autoprefixer-rails (>= 6.0.3)
       popper_js (>= 1.12.3, < 2)
       sass (>= 3.5.2)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.1.0)
     capybara (2.17.0)
@@ -69,6 +72,10 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
+    dotenv (2.5.0)
+    dotenv-rails (2.5.0)
+      dotenv (= 2.5.0)
+      railties (>= 3.2, < 6.0)
     erubi (1.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
@@ -93,6 +100,9 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
+    mail_form (1.7.1)
+      actionmailer (>= 3.2, < 6)
+      activemodel (>= 3.2, < 6)
     method_source (0.9.0)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
@@ -207,13 +217,16 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap (~> 4.0.0.beta3)
+  bootstrap-sass (~> 3.3, >= 3.3.6)
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  dotenv-rails
   font-awesome-rails
   jbuilder (~> 2.5)
   jquery-rails
   jquery-slick-rails
+  mail_form
   owlcarousel-rails
   pg
   pry-byebug

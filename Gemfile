@@ -44,6 +44,9 @@ gem "jquery-slick-rails"
 gem 'wow-rails'
 
 gem 'pry-byebug'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'mail_form'
+gem 'dotenv-rails', groups: [:development, :test]
 
 
 group :development, :test do
