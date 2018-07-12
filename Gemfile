@@ -43,6 +43,8 @@ gem 'jbuilder', '~> 2.5'
 gem "jquery-slick-rails"
 gem 'wow-rails'
 
+gem 'pry-byebug'
+
 
 group :development, :test do
   gem 'sqlite3'
