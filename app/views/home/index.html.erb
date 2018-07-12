@@ -151,20 +151,6 @@
     <!-- Features Section End -->
 
     <!-- Start Video promo Section -->
-    <!-- <section class="video-promo section" data-stellar-background-ratio="0.5">
-    <div class="overlay-4"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-sm-12">
-              <div class="video-promo-content text-center">
-                <h2 class="wow zoomIn pos" data-wow-duration="1000ms" data-wow-delay="100ms">CEO Message</h2>
-                <p class="wow zoomIn pos" data-wow-duration="1000ms" data-wow-delay="100ms">Learn more about us, its only 30mins</p>
-                <a href="" class="video-popup wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s"><i class="fa fa-play-circle"></i></a>
-              </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
     <!-- End Video Promo Section -->
 
     <!-- Portfolio Section -->
@@ -392,41 +378,6 @@
     <!-- Counter Section End -->
 
     <!-- testimonial Section Start -->
-    <!-- <div id="testimonial" class="section">
-      <div class="container">
-        <div class="row justify-content-md-center">
-          <div class="col-md-10 wow fadeInRight" data-wow-delay="0.2s">
-            <div class="touch-slider owl-carousel owl-theme">
-              <div class="testimonial-item">
-              <%= image_tag("testimonial/customer1.png", alt: "")%>
-
-                <div class="testimonial-text">
-                  <p>We got BasilKabe to build us a simplified 4-page online store.<br> They took just over a week to code, fix bugs and address change requests.<br> You can rely on them to get the job done!</p>
-                  <h3>Johnathan Doe</h3>
-                  <span>Marketing Head Matrix media</span>
-                </div>
-              </div>
-              <div class="testimonial-item">
-                <%= image_tag("testimonial/customer2.png", alt: "")%>
-                <div class="testimonial-text">
-                  <p>BasilKabe provides excellent workmanship. They communicate effectively and complete tasks quickly.<br> I would not hesitate to recommend them for your jobs, and I hope to work with them on future projects of my own.</p>
-                  <h3>Oidila Matik</h3>
-                  <span>President Lexo Inc</span>
-                </div>
-              </div>
-              <div class="testimonial-item">
-                <%= image_tag("testimonial/customer3.png", alt: "")%>
-                <div class="testimonial-text">
-                  <p>Thanks for the quick work… Exactly what I wanted. Great work.</p>
-                  <h3>- Alex Dattilo</h3>
-                  <span>CEO Optima Inc</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <!-- testimonial Section Start -->
 
     <!-- Contact Section Start -->
@@ -441,22 +392,24 @@
               </div>
               <form id="contactForm">
                 <div class="row">
-
-
                   <%= form_for @contact, url: home_index_path, remote: true do |f| %>
-                  <div class="col-md-6">
+                    <div class="col-md-6">
                       <%= f.label :name %></br>
-                      <%= f.text_field  :name, required: true, class: "contact-form-text-area" %></br>
+                      <%= f.text_field  :name, required: true, class: "contact-form-text-area" %>
+                      <div class="help-block with-errors"></div></br>
 
                       <%= f.label :email %></br>
-                      <%= f.text_field :email, required: true, class: "contact-form-text-area" %></br>
+                      <%= f.text_field :email, required: true, class: "contact-form-text-area" %>
+                      <div class="help-block with-errors"></div></br>
 
                       <%= f.label :subject %></br>
-                      <%= f.text_field :subject, :hint => 'Leave this field blank!' %></br>
+                      <%= f.text_field :subject, required: true, class: "contact-form-text-area" %>
+                      <div class="help-block with-errors"></div></br>
 
                       <%= f.label :message %></br>
                       <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",
-                                        placeholder: "Send a message to Basil."%></br>
+                                        placeholder: "Send a message to Basil."%>
+                                        <div class="help-block with-errors"></div></br>
 
 
                       <%= f.submit 'Send Message', class: 'btn btn-primary' %>
@@ -465,36 +418,6 @@
                   <div class="col-md-6" id="flash-message">
                     <%= render 'flash' %>
                   </div>
-
-
-                  <!-- <div class="col-md-6">
-                    <div class="form-group">
-                      <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                   <div class="col-md-12">
-                    <div class="form-group">
-                      <input type="text" placeholder="Subject" id="msg_subject" class="form-control" required data-error="Please enter your subject">
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <textarea class="form-control" placeholder="Your Message" rows="11" data-error="Write your message" required></textarea>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="submit-button text-center">
-                      <button class="btn btn-common" id="submit" type="submit">Send Message</button>
-                      <div id="msgSubmit" class="h3 text-center hidden"></div>
-                      <div class="clearfix"></div>
-                    </div> -->
                   </div>
                 </div>
               </form>
