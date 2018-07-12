@@ -441,7 +441,33 @@
               </div>
               <form id="contactForm">
                 <div class="row">
+
+
+                  <%= form_for @contact, url: home_index_path, remote: true do |f| %>
                   <div class="col-md-6">
+                      <%= f.label :name %></br>
+                      <%= f.text_field  :name, required: true, class: "contact-form-text-area" %></br>
+
+                      <%= f.label :email %></br>
+                      <%= f.text_field :email, required: true, class: "contact-form-text-area" %></br>
+
+                      <%= f.label :subject %></br>
+                      <%= f.text_field :subject, :hint => 'Leave this field blank!' %></br>
+
+                      <%= f.label :message %></br>
+                      <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",
+                                        placeholder: "Send a message to Basil."%></br>
+
+
+                      <%= f.submit 'Send Message', class: 'btn btn-primary' %>
+                    </div>
+                  <% end %>
+                  <div class="col-md-6" id="flash-message">
+                    <%= render 'flash' %>
+                  </div>
+
+
+                  <!-- <div class="col-md-6">
                     <div class="form-group">
                       <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
                       <div class="help-block with-errors"></div>
@@ -468,7 +494,7 @@
                       <button class="btn btn-common" id="submit" type="submit">Send Message</button>
                       <div id="msgSubmit" class="h3 text-center hidden"></div>
                       <div class="clearfix"></div>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </form>
