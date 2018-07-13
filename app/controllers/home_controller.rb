@@ -6,7 +6,7 @@ class HomeController < ApplicationController
         # re-initialize Home object for cleared form
         @contact = Home.new
         redirect_to root_url
-        flash[:notice] = "Enquiry successfully sent"
+        flash[:success] = "Enquiry successfully sent"
       end
   end
 

@@ -1,7 +1,9 @@
+    <div class="col-md-12" style="text-align: center;" >
+      <%= render 'flash' %>
+    </div>
 <!-- Header Section Start -->
 
     <header id="video-area" data-stellar-background-ratio="0.5">
-      <%= video_tag "video.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video" %>
       <div class="fixed-top">
           <div class="container">
             <div class="logo-menu">
@@ -388,19 +390,19 @@
                   <%= form_for @contact, url: home_index_path, remote: true do |f| %>
                     <div class="col-md-6">
                       <%= f.label :name %></br>
-                      <%= f.text_field  :name, required: true, class: "contact-form-text-area" %>
+                      <%= f.text_field  :name, required: true %>
                       <div class="help-block with-errors"></div></br>
 
                       <%= f.label :email %></br>
-                      <%= f.text_field :email, required: true, class: "contact-form-text-area" %>
+                      <%= f.text_field :email, required: true %>
                       <div class="help-block with-errors"></div></br>
 
                       <%= f.label :subject %></br>
-                      <%= f.text_field :subject, required: true, class: "contact-form-text-area" %>
+                      <%= f.text_field :subject, required: true %>
                       <div class="help-block with-errors"></div></br>
 
                       <%= f.label :message %></br>
-                      <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",
+                      <%= f.text_area :message, rows: 8, cols: 40, required: true,
                                         placeholder: "Send a message to Basil."%>
                                         <div class="help-block with-errors"></div></br>
 
@@ -408,9 +410,6 @@
                       <%= f.submit 'Send Message', class: 'btn btn-primary' %>
                     </div>
                   <% end %>
-                  <div class="col-md-6" id="flash-message">
-                    <%= render 'flash' %>
-                  </div>
                   </div>
                 </div>
               </form>
